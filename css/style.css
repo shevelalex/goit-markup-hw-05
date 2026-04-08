@@ -429,7 +429,12 @@ a:active {
 }
 
 .footer-item {
-  margin-right: 120px;
+  /* margin-right: 120px; */
+}
+
+.footer-item-center {
+  margin-left: 120px;
+  margin-right: 80px;
 }
 
 .footer-logo {
@@ -497,4 +502,51 @@ a:active {
 
 .footer-sm-icon {
   fill: #f4f4fd;
+}
+
+.footer-text-subsribe {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.footer-email {
+  width: 264px;
+  height: 40px;
+  border: 1px solid var(--WHITE, #FFF);
+  border-radius: 4px;
+  background: inherit;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  margin-right: 24px;
+}
+
+.footer-email::placeholder {
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: 0.48px;
+  color: var(--WHITE, #FFF);
+  padding-left: 16px;
+}
+
+.footer-btn-subscribe {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 24px;
+  gap: 16px;
+  background: #4D5AE5;
+  border-radius: 4px;
+  border: 1px solid #4D5AE5;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: 0.64px;
+  text-align: center;
+  color: #FFF;
 }
