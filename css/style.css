@@ -20,6 +20,10 @@ img {
   display: block;
 }
 
+input {
+  border: none;
+}
+
 body {
   background-color: #ffffff;
   font-family: "Roboto", sans-serif;
@@ -516,11 +520,25 @@ a:active {
 .footer-email {
   width: 264px;
   height: 40px;
-  border: 1px solid var(--WHITE, #FFF);
+  border: 1px solid #FFF;
   border-radius: 4px;
   background: inherit;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: 0.48px;
+  color: #FFF;
+  padding-left: 16px;
   margin-right: 24px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-email:hover,
+.footer-email:focus {
+  outline: none;
+  border: 1px solid #31D0AA;
 }
 
 .footer-email::placeholder {
@@ -530,7 +548,6 @@ a:active {
   line-height: 24px;
   letter-spacing: 0.48px;
   color: var(--WHITE, #FFF);
-  padding-left: 16px;
 }
 
 .footer-btn-subscribe {
@@ -549,4 +566,12 @@ a:active {
   letter-spacing: 0.64px;
   text-align: center;
   color: #FFF;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-btn-subscribe:hover,
+.footer-btn-subscribe:focus {
+  background: #31D0AA;
+  border: 1px solid #31D0AA;
 }
