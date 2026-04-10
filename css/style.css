@@ -517,6 +517,13 @@ a:active {
   margin-bottom: 16px;
 }
 
+.footer-block-subscribe {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-label-subscribe {}
+
 .footer-email {
   width: 264px;
   height: 40px;
@@ -531,7 +538,6 @@ a:active {
   letter-spacing: 0.48px;
   color: #FFF;
   padding-left: 16px;
-  margin-right: 24px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -551,29 +557,35 @@ a:active {
 }
 
 .footer-btn-subscribe {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 24px;
+  min-width: 165px;
+  height: 40px;
   gap: 16px;
   background: #4D5AE5;
   border-radius: 4px;
-  border: 1px solid #4D5AE5;
+  border: none;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
   font-style: normal;
-  line-height: 24px;
-  letter-spacing: 0.64px;
+  line-height: 1.5;
+  letter-spacing: 0.04px;
   text-align: center;
   color: #FFF;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-btn-subscribe:hover,
 .footer-btn-subscribe:focus {
   background: #31D0AA;
-  border: 1px solid #31D0AA;
+}
+
+.footer-subscibe-icon {
+  fill: #f4f4fd;
+  margin-left: 16px;
 }
 
 .modal-overlay {
@@ -634,7 +646,7 @@ a:active {
   fill: #FFF;
 }
 
-.modal h1 {
+.modal h2 {
   font-size: 16px;
   font-weight: 500;
   font-style: normal;
