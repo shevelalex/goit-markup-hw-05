@@ -571,7 +571,7 @@ a:active {
   font-weight: 500;
   font-style: normal;
   line-height: 1.5;
-  letter-spacing: 0.04px;
+  letter-spacing: 0.04em;
   text-align: center;
   color: #FFF;
   cursor: pointer;
@@ -589,7 +589,7 @@ a:active {
 }
 
 .modal-overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(46, 47, 66, 0.4);
   position: fixed;
   top: 0;
   left: 0;
@@ -601,7 +601,7 @@ a:active {
   align-items: center;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-overlay.is-open {
@@ -610,30 +610,41 @@ a:active {
 }
 
 .modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: #FCFCFC;
   border-radius: 4px;
   box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.20), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.14);
-  padding: 24px;
+  padding: 72px 24px 24px 24px;
   width: 408px;
-  /* height: 584px; */
+  min-height: 584px;
   overflow-y: auto;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn-close {
   display: flex;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  padding: 0;
   align-items: center;
   justify-content: center;
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: #E7E9FC;
+  background-color: #E7E9FC;
   border: 1px solid rgba(0, 0, 0, 0.10);
-  margin: 0px 0px 24px auto;
-  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-btn-close:hover {
-  background: #404BBF;
+.modal-btn-close:hover,
+.modal-btn-close:focus {
+  background-color: #404BBF;
+  border: none;
 }
 
 .modal-icon-close {
@@ -642,11 +653,12 @@ a:active {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-icon-close:hover {
-  fill: #FFF;
+.modal-icon-close:hover,
+.modal-icon-close:focus {
+  fill: #FFFFFF;
 }
 
-.modal h2 {
+.modal-text-callback {
   font-size: 16px;
   font-weight: 500;
   font-style: normal;
@@ -662,6 +674,7 @@ a:active {
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
+  margin-bottom: 8px;
   font-size: 12px;
   font-weight: 400;
   font-style: normal;
@@ -672,8 +685,15 @@ a:active {
   border: none;
 }
 
-.modal-fieldset p {
+.modal-item-title {
+  display: block;
   margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 14px;
+  letter-spacing: 0.48px;
+  color: #8E8F99;
 }
 
 .modal-item {
@@ -685,14 +705,16 @@ a:active {
 .modal-icon {
   position: absolute;
   left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
   fill: var(--NAVY-BLUE, #2E2F42);
   pointer-events: none;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* РОЗРУЛИТИ */
-/* .modal-icon:focus {
+.modal-icon:focus {
   fill: var(--IRIS, #4D5AE5);
-} */
+}
 
 .modal-field {
   width: 360px;
