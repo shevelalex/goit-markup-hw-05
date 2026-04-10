@@ -348,7 +348,6 @@
       <p class="modal-text-callback">Leave your contacts and we will call you back</p>
       <form>
         <div class="modal-fieldset">
-
           <label for="user-name" class="modal-item-title">Name</label>
           <div class="modal-item">
             <input type="text" name="user-name" id="user-name" class="modal-field">
@@ -356,7 +355,8 @@
               <use href="./images/icons.svg#icon-name"></use>
             </svg>
           </div>
-
+        </div>
+        <div class="modal-fieldset">
           <label for="user-phone" class="modal-item-title">Phone</label>
           <div class="modal-item">
             <input type="tel" name="user-phone" id="user-phone" class="modal-field">
@@ -364,7 +364,8 @@
               <use href="./images/icons.svg#icon-phone"></use>
             </svg>
           </div>
-
+        </div>
+        <div class="modal-fieldset">
           <label for="user-name" class="modal-item-title">Email</label>
           <div class="modal-item">
             <input type="email" name="user-email" id="user-email" class="modal-field">
@@ -372,39 +373,12 @@
               <use href="./images/icons.svg#icon-email"></use>
             </svg>
           </div>
-
+        </div>
+        <div class="modal-fieldset">
           <label for="user-ccomment" class="modal-item-title">Comment</label>
           <textarea name="user-ccomment" id="user-ccomment" placeholder="Text input"
             class="modal-field t-area"></textarea>
         </div>
-
-        <!-- <div class="modal-fieldset">
-          <p>Name</p>
-          <div class="modal-item">
-            <svg width="18" height="18" class="modal-icon">
-              <use href="./images/icons.svg#icon-name"></use>
-            </svg>
-            <label><input type="text" name="name" id="username" class="modal-field"></label>
-          </div>
-          <p>Phone</p>
-          <div class="modal-item">
-            <svg width="18" height="18" class="modal-icon">
-              <use href="./images/icons.svg#icon-phone"></use>
-            </svg>
-            <label><input type="tel" name="phone" id="userphone" class="modal-field"></label>
-          </div>
-          <p>E-mail</p>
-          <div class="modal-item">
-            <svg width="18" height="18" class="modal-icon">
-              <use href="./images/icons.svg#icon-email"></use>
-            </svg>
-            <label><input type="email" name="email" id="useremail" class="modal-field"></label>
-          </div>
-          <p>Comment</p>
-          <label><textarea name="comment" id="userccomment" placeholder="Text input"
-              class="modal-field t-area"></textarea></label>
-        </div> -->
-
         <div class="modal-item modal-policy">
           <label>
             <input type="checkbox" name="privacypolicy" value="accept" class="modal-checkbox-hidden" />
@@ -419,8 +393,8 @@
           <button type="submit" class="modal-btn-sbm">Send</button>
         </div>
       </form>
-
     </div>
+  </div>
 </body>
 
 </html>
