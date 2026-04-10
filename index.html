@@ -374,20 +374,22 @@
             </svg>
           </div>
         </div>
-        <div class="modal-fieldset">
-          <label for="user-ccomment" class="modal-item-title">Comment</label>
-          <textarea name="user-ccomment" id="user-ccomment" placeholder="Text input"
+        <div class="modal-fieldset-textarea">
+          <label for="user-comment" class="modal-item-title">Comment</label>
+          <textarea name="user-comment" id="user-comment" placeholder="Text input"
             class="modal-field t-area"></textarea>
         </div>
         <div class="modal-item modal-policy">
-          <label>
-            <input type="checkbox" name="privacypolicy" value="accept" class="modal-checkbox-hidden" />
+          <input type="checkbox" id="user-privacy" name="user-privacy" value="true" class="visually-hidden" />
+          <label for="user-privacy" class="modal-text-policy">I accept the terms and conditions of the <a href=""
+              class="modal-link">Privacy Policy</a>
+            <span>
+              <svg width="16" height="16" class="modal-checkbox">
+                <use href="./images/icons.svg#icon-checkbox-default"></use>
+              </svg>
+
+            </span>
           </label>
-          <svg width="16" height="16" class="modal-checkbox">
-            <use href="./images/icons.svg#icon-checkbox-default"></use>
-          </svg>
-          <span class="modal-text-policy">I accept the terms and conditions of the <a href="" class="modal-link">Privacy
-              Policy</a></span>
         </div>
         <div class="modal-btn-block">
           <button type="submit" class="modal-btn-sbm">Send</button>
