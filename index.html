@@ -330,19 +330,20 @@
           <input type="email" name="useremail" placeholder="E-mail" class="footer-email">
           <button type="submit" class="footer-btn-subscribe">Subscribe <svg class="footer-sm-icon" width="20"
               height="20">
-              <use href="./images/icons.svg#icon-twitter"></use>
+              <use href="./images/icons.svg#icon-send"></use>
             </svg></button>
         </form>
       </div>
     </div>
   </footer>
-  <div class="modal-overlay is-open">
+  <!-- <div class="modal-overlay is-open"> -->
+  <div class="modal-overlay">
     <div class="modal">
       <button type="button" class="modal-btn-close">
-        x
-        <!-- <svg class="modal-icon" width="8" height="8">
-          <use href="./images/icons.svg#icon-twitter"></use>
-        </svg> -->
+        <!-- x -->
+        <svg class="modal-icon-close" width="8" height="8">
+          <use href="./images/icons.svg#icon-btn-close"></use>
+        </svg>
       </button>
       <h1>Leave your contacts and we will call you back</h1>
       <form action="">
@@ -351,7 +352,7 @@
             <p>Name</p>
             <div class="modal-item">
               <svg width="18" height="18" class="modal-icon">
-                <use href="./images/icons.svg#icon-twitter"></use>
+                <use href="./images/icons.svg#icon-name"></use>
               </svg>
               <input type="text" name="name" id="username" class="modal-field">
             </div>
@@ -360,7 +361,7 @@
             <p>Phone</p>
             <div class="modal-item">
               <svg width="18" height="18" class="modal-icon">
-                <use href="./images/icons.svg#icon-twitter"></use>
+                <use href="./images/icons.svg#icon-phone"></use>
               </svg>
               <input type="tel" name="phone" id="userphone" class="modal-field">
             </div>
@@ -369,7 +370,7 @@
             <p>E-mail</p>
             <div class="modal-item">
               <svg width="18" height="18" class="modal-icon">
-                <use href="./images/icons.svg#icon-twitter"></use>
+                <use href="./images/icons.svg#icon-email"></use>
               </svg>
               <input type="emal" name="email" id="useremail" class="modal-field">
             </div>
@@ -380,11 +381,19 @@
           </label>
         </fieldset>
         <label>
-          <input type="checkbox" name="privacypolicy" value="accept" />
-          <span class="modal-text-policy">I accept the terms and conditions of the <a href="" class="modal-link">Privacy
-              Policy</a></span>
+          <div class="modal-item modal-policy">
+            <input type="checkbox" name="privacypolicy" value="accept" class="modal-checkbox-hidden" />
+            <svg width="16" height="16" class="modal-checkbox">
+              <use href="./images/icons.svg#icon-checkbox-default"></use>
+            </svg>
+            <span class="modal-text-policy">I accept the terms and conditions of the <a href=""
+                class="modal-link">Privacy
+                Policy</a></span>
+          </div>
         </label>
-        <button type="submit" class="modal-btn-sbm">Send</button>
+        <div class="modal-btn-block">
+          <button type="submit" class="modal-btn-sbm">Send</button>
+        </div>
       </form>
     </div>
   </div>

@@ -603,7 +603,7 @@ a:active {
   box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.20), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.14);
   padding: 24px;
   width: 408px;
-  height: 584px;
+  /* height: 584px; */
   overflow-y: auto;
 }
 
@@ -614,9 +614,24 @@ a:active {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background-color: #E7E9FC;
+  background: #E7E9FC;
   border: 1px solid rgba(0, 0, 0, 0.10);
   margin: 0px 0px 24px auto;
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-btn-close:hover {
+  background: #404BBF;
+}
+
+.modal-icon-close {
+  position: absolute;
+  fill: var(--NAVY-BLUE, #2E2F42);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-icon-close:hover {
+  fill: #FFF;
 }
 
 .modal h1 {
@@ -658,9 +673,14 @@ a:active {
 .modal-icon {
   position: absolute;
   left: 16px;
-  fill: rgb(0, 0, 0);
+  fill: var(--NAVY-BLUE, #2E2F42);
   pointer-events: none;
 }
+
+/* РОЗРУЛИТИ */
+/* .modal-icon:focus {
+  fill: var(--IRIS, #4D5AE5);
+} */
 
 .modal-field {
   width: 360px;
@@ -677,9 +697,24 @@ a:active {
 }
 
 .t-area {
-  padding: 8px 16px;
+  padding: 8px 16px 0px 16px;
   height: 120px;
   resize: none;
+}
+
+.modal-policy {
+  margin-top: 16px;
+}
+
+.modal-checkbox-hidden {
+  display: none;
+}
+
+.modal-checkbox {
+  fill: #FFF;
+  border: 1px solid rgba(46, 47, 66, 0.40);
+  border-radius: 4px;
+  margin-right: 8px;
 }
 
 .modal-text-policy {
@@ -692,6 +727,11 @@ a:active {
 
 .modal-link {
   color: #4D5AE5;
+}
+
+.modal-btn-block {
+  display: flex;
+  justify-content: center;
 }
 
 .modal-btn-sbm {
@@ -713,4 +753,9 @@ a:active {
   letter-spacing: 0.64px;
   text-align: center;
   color: #FFF;
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-btn-sbm:hover {
+  background: #404BBF;
 }
