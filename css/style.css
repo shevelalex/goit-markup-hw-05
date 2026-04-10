@@ -795,13 +795,15 @@ a:active {
 
 .modal-btn-sbm {
   display: block;
+  min-width: 169px;
+  height: 56px;
   margin: 0px auto;
   align-items: center;
   justify-content: center;
   gap: 16px;
-  background: #4D5AE5;
+  background-color: #4D5AE5;
   border-radius: 4px;
-  border: 1px solid #4D5AE5;
+  border: none;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   padding: 16px 64px;
   margin-top: 24px;
@@ -813,9 +815,10 @@ a:active {
   letter-spacing: 0.64px;
   text-align: center;
   color: #FFF;
-  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn-sbm:hover {
-  background: #404BBF;
+  background-color: #404BBF;
 }
