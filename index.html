@@ -379,15 +379,28 @@
           <textarea name="user-comment" id="user-comment" placeholder="Text input"
             class="modal-field t-area"></textarea>
         </div>
-        <div class="modal-item modal-policy">
+        <!-- <div class="modal-item modal-policy">
           <input type="checkbox" id="user-privacy" name="user-privacy" value="true" class="visually-hidden" />
           <label for="user-privacy" class="modal-text-policy">
             <span class="modal-policy-ico">
-              <svg width="10" height="8" class="modal-checkbox">
+              <svg width="18" height="18" class="modal-checkbox">
                 <use href="./images/icons.svg#icon-checkbox-accept"></use>
               </svg>
             </span>
             I accept the terms and conditions of the <a href="" class="modal-link">Privacy Policy</a>
+          </label>
+        </div> -->
+
+        <div class="modal-item modal-block-policy">
+          <label for="checkbox-policy">
+            <input type="checkbox" name="checkbox-policy" id="checkbox-policy" class="visually-hidden">
+            <span class="checkbox-policy">
+              <svg width="16" height="16" class="icon-checkbox">
+                <use href="./images/icons.svg#icon-checkbox-accept"></use>
+              </svg>
+            </span>
+            <span class="policy-text">I accept the terms and conditions of the <a href="" class="policyl-link">Privacy
+                Policy</a></span>
           </label>
         </div>
         <button type="submit" class="modal-btn-sbm">Send</button>
