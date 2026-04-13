@@ -715,11 +715,6 @@ a:active {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-field:focus {
-  outline: none;
-  border: 1px solid #4D5AE5;
-}
-
 .modal-icon {
   position: absolute;
   left: 16px;
@@ -730,7 +725,12 @@ a:active {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-field:focus .modal-icon {
+.modal-field:focus {
+  outline: none;
+  border: 1px solid #4D5AE5;
+}
+
+.modal-field:focus+.modal-icon {
   fill: #4D5AE5;
 }
 
@@ -748,54 +748,6 @@ a:active {
   resize: none;
 }
 
-/* 
-.modal-policy {
-  margin-top: 16px;
-  margin-bottom: 24px;
-}
-
-.visually-hidden {
-  display: none;
-}
-
-.modal-policy-ico {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  fill: transparent;
-  width: 16px;
-  height: 16px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 2px;
-  margin-right: 8px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-policy-ico:checked {
-  background-color: #404bbf;
-  border: none;
-  fill: #F4F4FD;
-}
-
-.modal-checkbox {
-  fill: #FFF;
-  border: 1px solid rgba(46, 47, 66, 0.40);
-  border-radius: 4px;
-}
-
-.modal-text-policy {
-  font-size: 12px;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 1.17;
-  letter-spacing: 0.48px;
-  color: #8e8f99;
-}
-
-.modal-link {
-  color: #4D5AE5;
-} */
-
 .modal-block-policy {
   margin-top: 16px;
   margin-bottom: 24px;
@@ -812,16 +764,19 @@ a:active {
   fill: transparent;
   width: 16px;
   height: 16px;
-  /* border: 1px solid rgba(46, 47, 66, 0.4); */
+  border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
   margin-right: 8px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.visually-hidden:checked+.policy-text .checkbox-policy {
+  background-color: #404BBF;
+  fill: #404BBF;
+}
+
 .icon-checkbox {
-  fill: #FFF;
-  /* border: 1px solid rgba(46, 47, 66, 0.40); */
-  border-radius: 4px;
+  fill: #fff;
 }
 
 .policy-text {
